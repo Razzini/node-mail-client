@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css2);
+body{
+    font-family: 'Roboto', sans-serif ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #33007b ;
+}
+
+.sidebar header{
+    font-size: 22px;
+    color: #FFF;
+    text-align: center;
+    line-height: 70px;
+    background-color: #4c00a4;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    font-size: 20px;
+    color: #FFF;
+    padding-left: 40px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    
+}
+
+.sidebar li:hover a{
+    background-color: #4c00a4;
+    padding-left: -40px;
+}
+
+.active{
+    background-color: #4c00a4;
+}
+
+.send{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
