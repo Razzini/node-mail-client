@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css2);
+body{
+    font-family: 'Roboto', sans-serif ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #33007b ;
+    margin-top: 50px;
+}
+
+.sidebar header{
+    font-size: 22px;
+    color: #FFF;
+    text-align: center;
+    line-height: 70px;
+    background-color: #4c00a4;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    font-size: 20px;
+    color: #FFF;
+    padding-left: 40px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    
+}
+
+.sidebar li:hover a{
+    background-color: #4c00a4;
+    padding-left: -40px;
+}
+
+.active{
+    background-color: #4c00a4;
+}
+
+.form-container{
+    width: 250px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: #4c00a4;
+    border-radius: 10px;
+    box-shadow:0 0 10px 0 #000;
+    margin: auto;
+    color: #FFF;
+}
+.topo{
+    padding-top: 20vh;
+}
+.form-container{
+    height: 250px;
+    width: 300px;
+}
+h2{
+    text-align: center;
+}
+.form-container ul{
+    text-align: center;
+    margin-top: 67px;
+
+}
+.form-container ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.form-container li input{
+    width: 300px;
+    text-align: center;
+    padding: 8px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-container li input[type="button"]{
+    background-color: #77DD77;
+    color: #FFF;
+}
+.navbar{
+    position: fixed;
+    background-color: #4c00a4;
+    width: 100%;
+    height: 50px;
+}
+.login-name{
+    text-align: right;
+}
+.send{
+    margin-left: 250px;
+    height: 500px;
+    width: 88%;
+    position: absolute;
+    margin-top: 50px;
+}
+ .mail{
+    margin-top: 20px;
+    position: absolute;
+    width: 88%;
+}
+.mail li input{
+    width: 100%;
+    margin-right:300px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    border-width: thin;
+    margin-left: 10px;
+    width: 100%;
+
+
+}
+.mail li textarea{
+    width: 100%;
+    margin-right:300px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    border-width: thin;
+    margin-left: 10px;
+    width: 100%;
+    resize: none;
+
+
+}
+.mail ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}

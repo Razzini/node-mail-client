@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=>">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="login-name">
+        </div>
+    </div>
+      <div class="sidebar">
+        <ul>
+            <li><a href="inbox.html "><i class="fas fa-box"></i> Caixa de entrada</a></li>
+            <li class="active"><a href="email.html"><i class="fas fa-envelope"></i> Nova menssagem</a></li>
+            <li><a href="bin.html"><i class="fas fa-trash"></i> Lixo eletronico</a></li>
+        </ul>
+    </div>
+    <div class="send">
+        <div class="mail">
+            <form>
+                <ul>
+                    <li><input type="email" id="email" placeholder="Para" required></li>
+                    <li><input type="email" id="cc" placeholder="CC"></li>
+                    <li> <input type="text" id="subject" placeholder="Assunto" required></li>
+                    <li><textarea name="message" id="text" cols="30" rows="40"></textarea></li>
+                    <li><input type="submit" value="Enviar"></li>
+
+                </ul>                
+            </form>
+
+        </div>
+
+    </div>
+    <script>
+        $('form').on('submit', (e)=>{
+            e.preventDefault();
+    
+            const email = $('#email').val().trim();
+            const cc = $('#cc').val().trim();
+            const subject = $('#subject').val().trim();
+            const text = $('#text').val().trim();
+            
+
+
+
+            const data = {
+                email, 
+                subject,
+                cc,
+                text
+            };
+
+    
+            $.post('/email', data, function(){
+                console.log('Servidor recebeu seus dados')
+            });
+            //limpa campos
+            $('#email').val("")
+            $('#subject').val("")
+            $('#text').val("")
+
+
+            //redireciona pagina
+            $(location).attr('href', 'inbox.html');
+            
+        })
+    </script>
+      
+
+</body>
+</html>
+
