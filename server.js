@@ -1,9 +1,8 @@
 const express = require('express');
 const sendMail = require('./mail')
-const log = console.log();
 const app = express();
 const path = require('path');
-
+const cors = require('cors');
 
 const PORT = 8080;
 
@@ -14,6 +13,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 app.use(express.static(__dirname + '/views'))
+
 
 
 //send mail
@@ -36,7 +36,7 @@ app.post('/email', (req, res)=>{
 
 
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views', 'login.html'));
+    res.sendFile(path.join(__dirname, 'views', 'email.html'));
 });
 
 
